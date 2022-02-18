@@ -1,0 +1,40 @@
+@use './variables';
+
+@mixin container {
+    width: 100%;
+    height: auto;
+
+    @media screen and (min-width: variables.$screen-sm) {
+        width: 54rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: variables.$screen-md) {
+        width: 72rem;
+    }
+
+    @media screen and (min-width: variables.$screen-lg) {
+        width: 96rem;
+    }
+
+    @media screen and (min-width: variables.$screen-xl) {
+        width: 114rem;
+    }
+}
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    width: 100%;
+    height: auto;
+
+    @media screen and (min-width: variables.$screen-md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: variables.$screen-lg) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
