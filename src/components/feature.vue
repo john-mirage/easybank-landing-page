@@ -26,6 +26,7 @@ defineProps<{
 
     @media screen and (min-width: variables.$screen-md) {
         text-align: start;
+        margin-bottom: 0;
     }
 
     &__logo {
