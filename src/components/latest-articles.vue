@@ -63,7 +63,8 @@ const latestArticles = [
 .latest-articles {
     width: 100%;
     height: auto;
-    padding: 8rem 2.4rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 
     &__container {
         @include mixins.container;

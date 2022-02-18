@@ -47,6 +47,11 @@ defineProps<{
         font-weight: 400;
         color: variables.$color-grayish-blue;
         line-height: 2rem;
+
+        @media screen and (min-width: variables.$screen-md) {
+            max-width: unset;
+            margin: 0;
+        }
     }
 }
 </style>

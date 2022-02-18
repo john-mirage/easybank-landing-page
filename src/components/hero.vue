@@ -1,83 +1,107 @@
 <script setup lang="ts">
 import Button from '@components/button.vue'
-import mockupsImage from '@assets/images/image-mockups.png'
 </script>
 
 <template>
     <div class="hero">
-        <div class="hero__illustration">
-            <img class="hero__mockups" :src="mockupsImage" alt="Application mockups image">
+        <div class="hero__background"></div>
+        <div class="hero__mockups"></div>
+        <div class="hero__container">
+            <section class="hero__info">
+                <h1 class="hero__title">Next generation digital banking</h1>
+                <p class="hero__description">Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
+                <Button>Request Invite</Button>
+            </section>
         </div>
-        <section class="hero__info">
-            <h1 class="hero__title">Next generation digital banking</h1>
-            <p class="hero__description">Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
-            <Button>Request Invite</Button>
-        </section>
     </div>
 </template>
 
 <style lang="scss">
 @use '../assets/styles/variables';
+@use '../assets/styles/mixins';
 
 .hero {
+    position: relative;
     width: 100%;
     height: auto;
-    padding-top: 6.4rem;
-    padding-bottom: 8rem;
+    margin-top: 6.4rem;
+    margin-bottom: 8rem;
+    padding-top: 85%;
 
     @media screen and (min-width: variables.$screen-lg) {
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 0;
+        height: 70rem;
+        padding-top: 0;
+        margin-bottom: 0;
     }
 
-    &__illustration {
-        position: relative;
+    &__background {
+        position: absolute;
         z-index: 10;
-        display: block;
+        top: 0;
+        left: 0;
         width: 100%;
         height: auto;
-        padding-bottom: 100%;
+        padding-top: 90%;
         background-image: url(src/assets/images/bg-intro-mobile.svg);
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        pointer-events: none;
 
         @media screen and (min-width: variables.$screen-lg) {
-            order: 2;
-            padding-bottom: 56.25%;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            padding-top: 0;
+            background-image: url(src/assets/images/bg-intro-desktop.svg);
         }
     }
 
     &__mockups {
         position: absolute;
+        z-index: 20;
         top: 0;
         left: 0;
-        display: block;
         width: 100%;
-        height: 100%;
-        transform: translateY(-15%);
+        height: auto;
+        padding-top: 78%;
+        background-image: url(src/assets/images/image-mockups.png);
+        background-repeat: no-repeat;
+        background-size: 90% auto;
+        background-position: bottom center;
 
         @media screen and (min-width: variables.$screen-lg) {
+            left: calc(50% + 10rem);
+            width: calc(50% - 10rem);
+            height: 100%;
+            padding-top: 0;
+            background-size: auto 100%;
+            background-position: top left;
             transform: translateY(15%);
         }
+    }
+
+    &__container {
+        @include mixins.container;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
     }
 
     &__info {
         width: 100%;
         height: auto;
-        padding-left: 2.4rem;
-        padding-right: 2.4rem;
         text-align: center;
 
         @media screen and (min-width: variables.$screen-lg) {
-            order: 1;
+            width: 50%;
+            text-align: start;
         }
     }
 
     &__title {
         width: 100%;
         height: auto;
-        text-align: center;
         font-size: 4rem;
         font-weight: 400;
         color: variables.$color-dark-blue;

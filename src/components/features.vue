@@ -59,7 +59,8 @@ const features = [
 .features {
     width: 100%;
     height: auto;
-    padding: 8rem 2.4rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
     background-color: variables.$color-light-grayish-blue;
     text-align: center;
 
