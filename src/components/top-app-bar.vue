@@ -18,6 +18,7 @@ import IconHamburger from '@components/icon-hamburger.vue'
 
 .top-app-bar {
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     display: flex;

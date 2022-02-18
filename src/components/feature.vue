@@ -22,6 +22,11 @@ defineProps<{
     width: 100%;
     height: auto;
     margin-bottom: 4rem;
+    text-align: center;
+
+    @media screen and (min-width: variables.$screen-md) {
+        text-align: start;
+    }
 
     &__logo {
         margin-bottom: 2rem;
@@ -35,6 +40,9 @@ defineProps<{
     }
 
     &__description {
+        max-width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 1.4rem;
         font-weight: 400;
         color: variables.$color-grayish-blue;

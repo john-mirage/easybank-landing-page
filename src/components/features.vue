@@ -35,28 +35,41 @@ const features = [
 
 <template>
     <div class="features">
-        <h2 class="features__title">Why choose Easybank</h2>
-        <p class="features__description">We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
-        <Feature
-            v-for="(feature, index) in features"
-            :name="feature.name"
-            :description="feature.description"
-            :iconSrc="feature.iconSrc"
-            :iconAlt="feature.iconAlt"
-            :key="index"
-        />
+        <div class="features__container">
+            <h2 class="features__title">Why choose Easybank</h2>
+            <p class="features__description">We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
+            <ul class="features__list">
+                <Feature
+                    v-for="(feature, index) in features"
+                    :name="feature.name"
+                    :description="feature.description"
+                    :iconSrc="feature.iconSrc"
+                    :iconAlt="feature.iconAlt"
+                    :key="index"
+                />
+            </ul>
+        </div>
     </div>
 </template>
 
 <style lang="scss">
 @use '../assets/styles/variables';
+@use '../assets/styles/mixins';
 
 .features {
     width: 100%;
     height: auto;
     padding: 8rem 2.4rem;
-    text-align: center;
     background-color: variables.$color-light-grayish-blue;
+    text-align: center;
+
+    @media screen and (min-width: variables.$screen-md) {
+        text-align: start;
+    }
+
+    &__container {
+        @include mixins.container;
+    }
 
     &__title {
         font-size: 3rem;
@@ -71,6 +84,14 @@ const features = [
         color: variables.$color-grayish-blue;
         line-height: 2rem;
         margin-bottom: 3rem;
+
+        @media screen and (min-width: variables.$screen-md) {
+            width: 50rem;
+        }
+    }
+
+    &__list {
+        @include mixins.grid;
     }
 }
 </style>

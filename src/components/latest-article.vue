@@ -10,7 +10,9 @@ defineProps<{
 
 <template>
     <div class="latest-article">
-        <img class="latest-article__image" :src="imageSrc" :alt="imageAlt">
+        <header class="latest-article__header">
+            <img class="latest-article__image" :src="imageSrc" :alt="imageAlt">
+        </header>
         <div class="latest-article__body">
             <p class="latest-article__author">By {{ author }}</p>
             <h3 class="latest-article__name">{{ name }}</h3>
@@ -28,13 +30,22 @@ defineProps<{
     border-radius: 0.6rem;
     overflow: hidden;
     background-color: variables.$color-white;
-    margin-bottom: 3rem;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 
-    &__image {
-        display: block;
+    &__header {
+        position: relative;
         width: 100%;
         height: auto;
+        padding-top: 56.25%;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 
     &__body {

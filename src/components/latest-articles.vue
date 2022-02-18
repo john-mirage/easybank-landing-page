@@ -39,26 +39,35 @@ const latestArticles = [
 
 <template>
     <div class="latest-articles">
-        <h2 class="latest-articles__title">Latest Articles</h2>
-        <LatestArticle
-            v-for="(latestArticle, index) in latestArticles"
-            :author="latestArticle.author"
-            :name="latestArticle.name"
-            :excerpt="latestArticle.excerpt"
-            :imageSrc="latestArticle.imageSrc"
-            :imageAlt="latestArticle.imageAlt"
-            :key="index"
-        />
+        <div class="latest-articles__container">
+            <h2 class="latest-articles__title">Latest Articles</h2>
+            <ul class="latest-articles__list">
+                <LatestArticle
+                    v-for="(latestArticle, index) in latestArticles"
+                    :author="latestArticle.author"
+                    :name="latestArticle.name"
+                    :excerpt="latestArticle.excerpt"
+                    :imageSrc="latestArticle.imageSrc"
+                    :imageAlt="latestArticle.imageAlt"
+                    :key="index"
+                />
+            </ul>
+        </div>
     </div>
 </template>
 
 <style lang="scss">
 @use '../assets/styles/variables';
+@use '../assets/styles/mixins';
 
 .latest-articles {
     width: 100%;
     height: auto;
     padding: 8rem 2.4rem;
+
+    &__container {
+        @include mixins.container;
+    }
 
     &__title {
         font-size: 3rem;
@@ -66,6 +75,14 @@ const latestArticles = [
         color: variables.$color-dark-blue;
         text-align: center;
         margin-bottom: 4rem;
+
+        @media screen and (min-width: variables.$screen-md) {
+            text-align: start;
+        }
+    }
+
+    &__list {
+        @include mixins.grid;
     }
 }
 </style>
