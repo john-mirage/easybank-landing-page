@@ -10,9 +10,9 @@ const items = [
 </script>
 
 <template>
-    <nav class="navigation">
+    <nav class="footer-navigation">
         <a
-            class="navigation__item"
+            class="footer-navigation__item"
             v-for="(item, index) in items"
             :key="index"
             href="#"
@@ -25,22 +25,24 @@ const items = [
 <style lang="scss">
 @use '../assets/styles/variables';
 
-.navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    width: 100%;
+.footer-navigation {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: auto;
     height: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+
+    @media screen and (min-width: variables.$screen-lg) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     &__item {
         font-size: 1.6rem;
         font-weight: 400;
         text-decoration: none;
         color: variables.$color-white;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        text-align: center;
     }
 }
 </style>

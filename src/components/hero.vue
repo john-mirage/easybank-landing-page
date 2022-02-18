@@ -31,6 +31,7 @@ import Button from '@components/button.vue'
     @media screen and (min-width: variables.$screen-lg) {
         height: 60rem;
         padding-top: 0;
+        margin-top: 8rem;
         margin-bottom: 0;
     }
 
@@ -52,7 +53,7 @@ import Button from '@components/button.vue'
             width: 50%;
             height: 100%;
             padding-top: 0;
-            background-position: top -30rem left -5rem;
+            background-position: top -30rem left -8rem;
             background-size: auto 200%;
             background-image: url(src/assets/images/bg-intro-desktop.svg);
         }
@@ -72,8 +73,8 @@ import Button from '@components/button.vue'
         background-position: bottom center;
 
         @media screen and (min-width: variables.$screen-lg) {
-            left: calc(50% + 12rem);
-            width: calc(50% - 12rem);
+            left: calc(50% + 10rem);
+            width: calc(50% - 10rem);
             height: 125%;
             padding-top: 0;
             background-size: 70rem auto;
@@ -107,6 +108,10 @@ import Button from '@components/button.vue'
         font-weight: 400;
         color: variables.$color-dark-blue;
         margin-bottom: 2rem;
+
+        @media screen and (min-width: variables.$screen-lg) {
+            width: 40rem;
+        }
     }
 
     &__description {
@@ -115,6 +120,10 @@ import Button from '@components/button.vue'
         color: variables.$color-grayish-blue;
         line-height: 2rem;
         margin-bottom: 3rem;
+
+        @media screen and (min-width: variables.$screen-lg) {
+            width: 40rem;
+        }
     }
 }
 </style>

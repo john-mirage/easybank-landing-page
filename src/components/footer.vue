@@ -5,45 +5,82 @@ import YoutubeIcon from '@components/icon-youtube.vue'
 import TwitterIcon from '@components/icon-twitter.vue'
 import PinterestIcon from '@components/icon-pinterest.vue'
 import InstagramIcon from '@components/icon-instagram.vue'
-import Navigation from '@components/navigation.vue'
+import Navigation from '@components/footer-navigation.vue'
 import Button from '@components/button.vue'
 </script>
 
 <template>
     <footer class="footer">
-        <Logo text-color="#fff" />
-        <div class="footer__social-networks">
-            <div class="footer__icon">
-                <FacebookIcon />
+        <div class="footer__container">
+            <div class="footer__section">
+                <Logo text-color="#fff" />
+                <div class="footer__social-networks">
+                    <div class="footer__icon">
+                        <FacebookIcon />
+                    </div>
+                    <div class="footer__icon">
+                        <YoutubeIcon />
+                    </div>
+                    <div class="footer__icon">
+                        <TwitterIcon />
+                    </div>
+                    <div class="footer__icon">
+                        <PinterestIcon />
+                    </div>
+                    <div class="footer__icon">
+                        <InstagramIcon />
+                    </div>
+                </div>
             </div>
-            <div class="footer__icon">
-                <YoutubeIcon />
-            </div>
-            <div class="footer__icon">
-                <TwitterIcon />
-            </div>
-            <div class="footer__icon">
-                <PinterestIcon />
-            </div>
-            <div class="footer__icon">
-                <InstagramIcon />
+            
+            <Navigation />
+
+            <div class="footer__section footer__section--right">
+                <Button>Request Invite</Button>
+                <p class="footer__copyright">&copy Easybank. All Rights Reserved</p>
             </div>
         </div>
-        <Navigation />
-        <Button>Request Invite</Button>
-        <p class="footer__copyright">&copy Easybank. All Rights Reserved</p>
     </footer>
 </template>
 
 <style lang="scss">
 @use '../assets/styles/variables';
+@use '../assets/styles/mixins';
 
 .footer {
     width: 100%;
     height: auto;
-    padding: 4rem 2.4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     background-color: variables.$color-dark-blue;
-    text-align: center;
+
+    &__container {
+        @include mixins.container;
+        text-align: center;
+
+        @media screen and (min-width: variables.$screen-lg) {
+            display: flex;
+            flex-direction: row;
+            text-align: start;
+        }
+    }
+
+    &__section {
+        width: auto;
+        height: auto;
+        margin-right: 10rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--right {
+            @media screen and (min-width: variables.$screen-lg) {
+                margin-left: auto;
+                text-align: end;
+            }
+        }
+    }
 
     &__social-networks {
         display: flex;
@@ -53,6 +90,10 @@ import Button from '@components/button.vue'
         height: auto;
         margin-top: 3rem;
         margin-bottom: 3rem;
+
+        @media screen and (min-width: variables.$screen-lg) {
+            justify-content: flex-start;
+        }
     }
 
     &__icon {
