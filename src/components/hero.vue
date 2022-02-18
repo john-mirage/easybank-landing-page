@@ -5,7 +5,7 @@ import mockupsImage from '@assets/images/image-mockups.png'
 
 <template>
     <div class="hero">
-        <img class="hero__image" :src="mockupsImage" alt="Mockups of the application">
+        <div class="hero__illustration"></div>
         <section class="hero__info">
             <h1 class="hero__title">Next generation digital banking</h1>
             <p class="hero__description">Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
@@ -20,16 +20,20 @@ import mockupsImage from '@assets/images/image-mockups.png'
 .hero {
     width: 100%;
     height: auto;
-    padding-bottom: 10rem;
+    padding-top: 6.4rem;
+    padding-bottom: 8rem;
 
-    &__image {
+    &__illustration {
         display: block;
         width: 100%;
         height: auto;
-        background-image: url(src/assets/images/bg-intro-mobile.svg);
+        padding-bottom: 100%;
+        background-image:
+            url(src/assets/images/image-mockups.png),
+            url(src/assets/images/bg-intro-mobile.svg);
         background-repeat: no-repeat;
-        background-size: 100% 117%;
-        margin-bottom: 2rem;
+        background-size: 100% auto, 100% 100%;
+        background-position: 0% 158%, 0% 0%;
     }
 
     &__info {

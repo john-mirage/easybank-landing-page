@@ -6,7 +6,7 @@ import IconHamburger from '@components/icon-hamburger.vue'
 
 <template>
     <header class="top-app-bar">
-        <Logo />
+        <Logo text-color="#2D314D" />
         <IconButton>
             <IconHamburger />
         </IconButton>
