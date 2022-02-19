@@ -28,13 +28,15 @@ const items = [
 .footer-navigation {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    row-gap: 2rem;
+    column-gap: 8rem;
     width: auto;
     height: auto;
     margin-bottom: 3rem;
 
     @media screen and (min-width: variables.$screen-lg) {
         grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 0;
     }
 
     &__item {
@@ -47,6 +49,10 @@ const items = [
 
         &:hover {
             color: variables.$color-lime-green;
+        }
+
+        @media screen and (min-width: variables.$screen-lg) {
+            text-align: start;
         }
     }
 }

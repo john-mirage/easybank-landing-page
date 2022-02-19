@@ -91,12 +91,17 @@ import Button from '@components/button.vue'
     }
 
     &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         width: 100%;
         height: auto;
         text-align: center;
 
         @media screen and (min-width: variables.$screen-lg) {
             width: 50%;
+            align-items: flex-start;
             text-align: start;
         }
     }

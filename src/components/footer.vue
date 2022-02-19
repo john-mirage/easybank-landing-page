@@ -12,7 +12,7 @@ import Button from '@components/button.vue'
 <template>
     <footer class="footer">
         <div class="footer__container">
-            <div class="footer__section">
+            <div class="footer__section footer__section--left">
                 <Logo text-color="#fff" />
                 <div class="footer__social-networks">
                     <div class="footer__icon">
@@ -33,10 +33,12 @@ import Button from '@components/button.vue'
                 </div>
             </div>
             
-            <Navigation />
+            <div class="footer__section footer__section--center">
+                <Navigation />
+            </div>
 
             <div class="footer__section footer__section--right">
-                <Button is-right>Request Invite</Button>
+                <Button>Request Invite</Button>
                 <p class="footer__copyright">&copy Easybank. All Rights Reserved</p>
             </div>
         </div>
@@ -56,28 +58,52 @@ import Button from '@components/button.vue'
 
     &__container {
         @include mixins.container;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: auto;
 
         @media screen and (min-width: variables.$screen-lg) {
-            display: flex;
             flex-direction: row;
-            text-align: start;
+            height: 10rem;
         }
     }
 
     &__section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: auto;
         height: auto;
-        margin-right: 10rem;
 
         &:last-child {
             margin-right: 0;
         }
 
+        @media screen and (min-width: variables.$screen-lg) {
+            justify-content: space-between;
+        }
+
         &--right {
             @media screen and (min-width: variables.$screen-lg) {
+                align-items: flex-end;
+                height: 100%;
                 margin-left: auto;
-                text-align: end;
+            }
+        }
+
+        &--center {
+            @media screen and (min-width: variables.$screen-lg) {
+                margin-left: 10%;
+            }
+        }
+        
+        &--left {
+            @media screen and (min-width: variables.$screen-lg) {
+                align-items: flex-start;
+                height: 100%;
             }
         }
     }
@@ -93,6 +119,7 @@ import Button from '@components/button.vue'
 
         @media screen and (min-width: variables.$screen-lg) {
             justify-content: flex-start;
+            margin: 0;
         }
     }
 
@@ -111,6 +138,13 @@ import Button from '@components/button.vue'
         font-weight: 400;
         color: variables.$color-grayish-blue;
         margin-top: 3rem;
+        text-align: center;
+        line-height: 2.4rem;
+
+        @media screen and (min-width: variables.$screen-lg) {
+            margin: 0;
+            text-align: left;
+        }
     }
 }
 </style>
