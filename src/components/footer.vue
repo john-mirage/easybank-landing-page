@@ -56,6 +56,11 @@ import Button from '@components/button.vue'
     padding-bottom: 4rem;
     background-color: variables.$color-dark-blue;
 
+    @media screen and (min-width: variables.$screen-lg) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
     &__container {
         @include mixins.container;
         display: flex;

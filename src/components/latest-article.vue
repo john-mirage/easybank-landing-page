@@ -68,7 +68,7 @@ defineProps<{
         color: variables.$color-dark-blue;
         text-decoration: none;
         margin-bottom: 1rem;
-        transition: color 300ms;
+        transition: color 150ms;
 
         &:hover {
             color: variables.$color-lime-green;
