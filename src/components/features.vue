@@ -73,18 +73,13 @@ const features = [
     }
 
     &__title {
-        font-size: 3rem;
-        font-weight: 400;
-        color: variables.$color-dark-blue;
+        @include mixins.text-heading;
         margin-bottom: 2rem;
     }
 
     &__description {
-        font-size: 1.4rem;
-        font-weight: 400;
-        color: variables.$color-grayish-blue;
-        line-height: 2rem;
-        margin-bottom: 3rem;
+        @include mixins.text-body;
+        margin-bottom: 6rem;
 
         @media screen and (min-width: variables.$screen-md) {
             width: 50rem;

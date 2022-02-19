@@ -2,6 +2,7 @@
 import Logo from '@components/logo.vue'
 import IconButton from '@components/icon-button.vue'
 import IconHamburger from '@components/icon-hamburger.vue'
+import Navigation from '@components/navigation.vue'
 import Button from '@components/button.vue';
 </script>
 
@@ -15,6 +16,9 @@ import Button from '@components/button.vue';
                 <IconButton class="top-app-bar__icon-button">
                     <IconHamburger />
                 </IconButton>
+            </div>
+            <div class="top-app-bar__section top-app-bar__section--desktop">
+                <Navigation />
             </div>
             <div class="top-app-bar__section top-app-bar__section--desktop">
                 <Button class="top-app-bar__button">Request Invite</Button>
@@ -51,9 +55,13 @@ import Button from '@components/button.vue';
 
     &__section {
         flex: 1 1 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
 
         &--mobile {
-            display: block;
+            display: flex;
 
             @media screen and (min-width: variables.$screen-lg) {
                 display: none;
@@ -64,7 +72,7 @@ import Button from '@components/button.vue';
             display: none;
 
             @media screen and (min-width: variables.$screen-lg) {
-                display: block;
+                display: flex;
             }
         }
     }

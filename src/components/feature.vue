@@ -30,13 +30,14 @@ defineProps<{
     }
 
     &__logo {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     &__name {
-        font-size: 2rem;
+        font-size: 2.4rem;
         font-weight: 400;
         color: variables.$color-dark-blue;
+        line-height: 3rem;
         margin-bottom: 2rem;
     }
 
@@ -44,10 +45,10 @@ defineProps<{
         max-width: 30rem;
         margin-left: auto;
         margin-right: auto;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         font-weight: 400;
         color: variables.$color-grayish-blue;
-        line-height: 2rem;
+        line-height: 2.4rem;
 
         @media screen and (min-width: variables.$screen-md) {
             max-width: unset;

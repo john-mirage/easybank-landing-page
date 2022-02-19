@@ -71,9 +71,7 @@ const latestArticles = [
     }
 
     &__title {
-        font-size: 3rem;
-        font-weight: 400;
-        color: variables.$color-dark-blue;
+        @include mixins.text-heading;
         text-align: center;
         margin-bottom: 4rem;
 

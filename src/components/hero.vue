@@ -29,7 +29,7 @@ import Button from '@components/button.vue'
     padding-top: 85%;
 
     @media screen and (min-width: variables.$screen-lg) {
-        height: 60rem;
+        height: 70rem;
         padding-top: 0;
         margin-top: 8rem;
         margin-bottom: 0;
@@ -53,8 +53,8 @@ import Button from '@components/button.vue'
             width: 50%;
             height: 100%;
             padding-top: 0;
-            background-position: top -30rem left -8rem;
-            background-size: auto 200%;
+            background-position: top -26rem left -5rem;
+            background-size: auto 150%;
             background-image: url(src/assets/images/bg-intro-desktop.svg);
         }
     }
@@ -73,11 +73,11 @@ import Button from '@components/button.vue'
         background-position: bottom center;
 
         @media screen and (min-width: variables.$screen-lg) {
-            left: calc(50% + 10rem);
-            width: calc(50% - 10rem);
-            height: 125%;
+            left: calc(50% + 15rem);
+            width: calc(50% - 15rem);
+            height: 122%;
             padding-top: 0;
-            background-size: 70rem auto;
+            background-size: 80rem auto;
             background-position: bottom left;
         }
     }
@@ -104,26 +104,16 @@ import Button from '@components/button.vue'
     &__title {
         width: 100%;
         height: auto;
-        font-size: 4rem;
+        font-size: 6rem;
         font-weight: 400;
         color: variables.$color-dark-blue;
-        margin-bottom: 2rem;
-
-        @media screen and (min-width: variables.$screen-lg) {
-            width: 40rem;
-        }
+        line-height: 7rem;
+        margin-bottom: 3rem;
     }
 
     &__description {
-        font-size: 1.4rem;
-        font-weight: 400;
-        color: variables.$color-grayish-blue;
-        line-height: 2rem;
-        margin-bottom: 3rem;
-
-        @media screen and (min-width: variables.$screen-lg) {
-            width: 40rem;
-        }
+        @include mixins.text-body;
+        margin-bottom: 4rem;
     }
 }
 </style>
