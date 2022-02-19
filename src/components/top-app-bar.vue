@@ -13,7 +13,7 @@ import Button from '@components/button.vue';
                 <Logo text-color="#2D314D" />
             </div>
             <div class="top-app-bar__section top-app-bar__section--mobile">
-                <IconButton class="top-app-bar__icon-button">
+                <IconButton is-right>
                     <IconHamburger />
                 </IconButton>
             </div>
@@ -21,7 +21,7 @@ import Button from '@components/button.vue';
                 <Navigation />
             </div>
             <div class="top-app-bar__section top-app-bar__section--desktop">
-                <Button class="top-app-bar__button">Request Invite</Button>
+                <Button is-right>Request Invite</Button>
             </div>
         </div>
     </header>
@@ -75,16 +75,6 @@ import Button from '@components/button.vue';
                 display: flex;
             }
         }
-    }
-
-    &__icon-button {
-        display: block;
-        margin-left: auto;
-    }
-
-    &__button {
-        display: block;
-        margin-left: auto;
     }
 }
 </style>

@@ -36,7 +36,7 @@ import Button from '@components/button.vue'
             <Navigation />
 
             <div class="footer__section footer__section--right">
-                <Button>Request Invite</Button>
+                <Button is-right>Request Invite</Button>
                 <p class="footer__copyright">&copy Easybank. All Rights Reserved</p>
             </div>
         </div>

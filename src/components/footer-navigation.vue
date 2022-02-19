@@ -43,6 +43,11 @@ const items = [
         text-decoration: none;
         color: variables.$color-white;
         text-align: center;
+        transition: color 150ms;
+
+        &:hover {
+            color: variables.$color-lime-green;
+        }
     }
 }
 </style>

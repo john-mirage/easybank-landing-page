@@ -15,7 +15,7 @@ defineProps<{
         </header>
         <div class="latest-article__body">
             <p class="latest-article__author">By {{ author }}</p>
-            <h3 class="latest-article__name">{{ name }}</h3>
+            <a class="latest-article__name" href="#">{{ name }}</a>
             <p class="latest-article__excerpt">{{ excerpt }}</p>
         </div>
     </div>
@@ -62,10 +62,17 @@ defineProps<{
     }
 
     &__name {
+        display: block;
         font-size: 1.8rem;
         font-weight: 400;
         color: variables.$color-dark-blue;
+        text-decoration: none;
         margin-bottom: 1rem;
+        transition: color 300ms;
+
+        &:hover {
+            color: variables.$color-lime-green;
+        }
     }
 
     &__excerpt {

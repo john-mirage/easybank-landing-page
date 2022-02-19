@@ -11,5 +11,10 @@
     width: 100%;
     height: auto;
     fill: variables.$color-white;
+    transition: fill 150ms;
+
+    &:hover {
+        fill: variables.$color-lime-green;
+    }
 }
 </style>

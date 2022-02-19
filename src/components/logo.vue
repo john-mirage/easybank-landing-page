@@ -23,9 +23,15 @@ defineProps<{
     </svg>
 </template>
 
-<style>
+<style lang="scss">
+@use '../assets/styles/variables';
+
 .logo {
     width: auto;
     height: 2rem;
+
+    @media screen and (min-width: variables.$screen-lg) {
+        height: 2.5rem;
+    }
 }
 </style>
