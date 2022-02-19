@@ -22,6 +22,9 @@
     @media screen and (min-width: variables.$screen-xl) {
         width: 114rem;
     }
+    @media screen and (min-width: variables.$screen-2xl) {
+        width: 132rem;
+    }
 }
 
 @mixin grid {
