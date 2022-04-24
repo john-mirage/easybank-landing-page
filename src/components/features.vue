@@ -36,7 +36,7 @@ const features = [
 <template>
     <div class="features">
         <div class="features__container">
-            <h2 class="features__title">Why choose Easybank</h2>
+            <h2 class="features__title">Why choose Easybank?</h2>
             <p class="features__description">We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
             <ul class="features__list">
                 <Feature

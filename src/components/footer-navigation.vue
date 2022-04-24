@@ -40,7 +40,7 @@ const items = [
     }
 
     &__item {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: 400;
         text-decoration: none;
         color: variables.$color-white;
