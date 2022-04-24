@@ -56,7 +56,7 @@ import Button from '@components/button.vue'
       padding-top: 0;
       background-position: top -26rem left -5rem;
       background-size: auto 150%;
-      background-image: url(src/assets/images/bg-intro-desktop.svg);
+      background-image: url(/src/assets/images/bg-intro-desktop.svg);
     }
   }
 
@@ -68,7 +68,7 @@ import Button from '@components/button.vue'
     width: 100%;
     height: auto;
     padding-top: 78%;
-    background-image: url(src/assets/images/image-mockups.png);
+    background-image: url(/src/assets/images/image-mockups.png);
     background-repeat: no-repeat;
     background-size: 90% auto;
     background-position: bottom center;
