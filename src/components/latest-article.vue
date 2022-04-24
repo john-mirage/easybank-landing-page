@@ -36,7 +36,7 @@ defineProps<{
     position: relative;
     width: 100%;
     height: auto;
-    padding-top: 20rem;
+    padding-top: 61%;
   }
 
   &__image {

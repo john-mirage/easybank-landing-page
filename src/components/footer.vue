@@ -116,7 +116,6 @@ import Button from '@components/button.vue'
   &__social-networks {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     width: auto;
     height: auto;
     margin-top: 3rem;
@@ -129,8 +128,8 @@ import Button from '@components/button.vue'
   }
 
   &__icon {
-    width: 2.4rem;
-    height: auto;
+    width: auto;
+    height: 2.4rem;
     margin-right: 1.6rem;
 
     &:last-child {
