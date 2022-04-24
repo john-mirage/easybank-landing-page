@@ -27,8 +27,8 @@ defineProps<{
 @use '../assets/styles/variables';
 
 .logo {
-    width: auto;
-    height: 2rem;
+    width: 14rem;
+    height: auto;
 
     @media screen and (min-width: variables.$screen-lg) {
         height: 2.5rem;
